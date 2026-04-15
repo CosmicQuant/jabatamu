@@ -97,7 +97,7 @@ export const Hero: React.FC = () => {
                     </div>
                 </div>
 
-                {/* RIGHT â€” Product bottles (desktop only) */}
+
                 {/* RIGHT — Video phone mockup (desktop only) */}
                 <div className="flex-1 hidden md:flex items-center justify-center">
                     <div className="relative group">
