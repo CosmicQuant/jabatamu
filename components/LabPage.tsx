@@ -8,9 +8,10 @@ export const LabPage: React.FC = () => {
       <section className="relative container mx-auto px-6 py-32 text-center space-y-8 overflow-hidden rounded-[4rem]">
         <div className="absolute inset-0 -z-20">
           <img
-            src={import.meta.env.BASE_URL + 'lab1.png'}
+            src="https://images.pexels.com/photos/8532867/pexels-photo-8532867.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
             alt="Laboratory Science"
-            className="w-full h-full object-cover opacity-50 dark:opacity-20"
+            className="w-full h-full object-cover opacity-60 dark:opacity-40"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-50/40 via-stone-50/60 to-stone-50 dark:from-[#0a0a0a]/40 dark:via-[#0a0a0a]/60 dark:to-[#0a0a0a]"></div>
         </div>
@@ -39,15 +40,11 @@ export const LabPage: React.FC = () => {
               We never use heat. Our proprietary cold-press process ensures that the delicate alkaloids and antioxidants in the khat leaves remain bio-available and potent.
             </p>
             <div className="aspect-video rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 overflow-hidden">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
-              >
-                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=231f79f456e7592451001e3b5e406f36829705a1&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
-              </video>
+              <img
+                src={import.meta.env.BASE_URL + 'lab1.png'}
+                alt="Cold-Press Extraction"
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
 

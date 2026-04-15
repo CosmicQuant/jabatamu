@@ -35,7 +35,7 @@ export const RootsPage: React.FC = () => {
           </div>
           <div className="flex-1 aspect-[4/5] bg-stone-100 dark:bg-stone-900 rounded-[4rem] border border-black/5 dark:border-white/5 overflow-hidden">
             <img
-              src={import.meta.env.BASE_URL + 'miraafarm2.png'}
+              src={import.meta.env.BASE_URL + 'miraafarm2.jpg'}
               alt="Miiraa Farm"
               loading="lazy"
               decoding="async"
