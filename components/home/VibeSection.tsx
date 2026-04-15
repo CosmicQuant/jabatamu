@@ -4,9 +4,9 @@ const BASE = import.meta.env.BASE_URL;
 
 const vibes = [
     { file: 'latenightsprint.jpg', label: 'Late Night Sprints', span: '' },
-    { file: 'socialspark.jpg',     label: 'The Social Spark',   span: 'md:col-span-2 md:row-span-2' },
-    { file: 'coastalchill.jpg',    label: 'Coastal Chill',      span: '' },
-    { file: 'cleanenergy.jpg',     label: 'Clean Energy',       span: '' },
+    { file: 'socialspark.jpg', label: 'The Social Spark', span: 'md:col-span-2 md:row-span-2' },
+    { file: 'coastalchill.jpg', label: 'Coastal Chill', span: '' },
+    { file: 'cleanenergy.jpg', label: 'Clean Energy', span: '' },
 ];
 
 export const VibeSection: React.FC = () => {
