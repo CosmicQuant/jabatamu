@@ -58,6 +58,12 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, isDarkMod
 
                         {/* Desktop nav links */}
                         <div className="hidden md:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.3em] text-stone-500">
+                            <button
+                                onClick={navigateToShop}
+                                className={`hover:text-stone-900 dark:hover:text-white transition-colors py-2 ${location.pathname === '/' ? 'text-yellow-500 border-b-2 border-yellow-500' : ''}`}
+                            >
+                                The Batch
+                            </button>
                             {navLinks.map(link => (
                                 <Link
                                     key={link.to}
@@ -132,6 +138,12 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, isDarkMod
                                 {link.label}
                             </Link>
                         ))}
+                        <button
+                            onClick={navigateToShop}
+                            className="text-xl font-black uppercase tracking-tighter py-4 border-b border-black/5 dark:border-white/5 transition-colors text-left text-stone-900 dark:text-white hover:text-yellow-500"
+                        >
+                            The Batch
+                        </button>
                         <button
                             onClick={navigateToShop}
                             className="mt-6 w-full bg-stone-900 dark:bg-white text-white dark:text-black py-4 rounded-2xl font-black uppercase tracking-[0.2em] text-sm hover:bg-yellow-500 dark:hover:bg-yellow-400 transition-all"

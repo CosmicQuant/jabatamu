@@ -27,8 +27,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAdd }) => {
   };
 
   return (
-    <div className="group bg-white dark:bg-[#111111] rounded-2xl md:rounded-[3rem] border border-black/5 dark:border-white/5 overflow-hidden transition-all duration-700 hover:border-black/20 dark:hover:border-white/20 hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
-      <div className="relative aspect-[4/5] overflow-hidden">
+    <div className="group bg-white dark:bg-[#111111] rounded-2xl md:rounded-[3rem] border border-black/5 dark:border-white/5 overflow-hidden transition-all duration-700 hover:border-black/20 dark:hover:border-white/20 hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_40px_80px_rgba(0,0,0,0.6)] md:flex md:flex-row">
+      <div className="relative aspect-[4/5] md:aspect-auto md:w-72 md:shrink-0 overflow-hidden">
         {/* Social Proof Badge — static, no bounce */}
         {product.flavor === 'Passion' && (
           <div className="absolute top-3 right-3 md:top-8 md:right-8 z-10">
@@ -51,7 +51,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAdd }) => {
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#111111] via-transparent to-transparent opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-white dark:from-[#111111] via-transparent to-transparent opacity-80"></div>
 
         <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
           <div className="space-y-1">
@@ -62,10 +62,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAdd }) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-12 space-y-4 md:space-y-8">
+      <div className="p-4 md:px-10 md:py-8 flex flex-col space-y-3 md:space-y-4 md:flex-1 md:justify-between">
         <div className="space-y-1 md:space-y-3">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-4">
-            <h3 className="text-xl md:text-4xl font-black text-stone-900 dark:text-white leading-[0.9] tracking-tighter uppercase">{product.name}</h3>
+            <h3 className="text-xl md:text-3xl font-black text-stone-900 dark:text-white leading-[0.9] tracking-tighter uppercase">{product.name}</h3>
             <div className="text-base md:text-2xl font-black text-green-600 dark:text-green-500 shrink-0">KSh {product.price.toLocaleString()}</div>
           </div>
 
