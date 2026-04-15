@@ -8,7 +8,7 @@ export const LabPage: React.FC = () => {
       <section className="relative container mx-auto px-6 py-32 text-center space-y-8 overflow-hidden rounded-[4rem]">
         <div className="absolute inset-0 -z-20">
           <img
-            src={import.meta.env.BASE_URL + 'lab1.jpg'}
+            src={import.meta.env.BASE_URL + 'lab1-hero.jpg'}
             alt="Laboratory Science"
             className="w-full h-full object-cover opacity-60 dark:opacity-30"
           />
