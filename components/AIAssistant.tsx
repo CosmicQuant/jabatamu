@@ -57,8 +57,8 @@ export const AIAssistant: React.FC = () => {
               >
                 <div
                   className={`max-w-[85%] p-4 rounded-2xl text-sm font-medium leading-relaxed ${msg.role === 'user'
-                      ? 'bg-stone-900 dark:bg-white text-white dark:text-black rounded-tr-none shadow-xl'
-                      : 'bg-white dark:bg-[#1a1a1a] text-stone-600 dark:text-stone-300 border border-black/5 dark:border-white/5 rounded-tl-none'
+                    ? 'bg-stone-900 dark:bg-white text-white dark:text-black rounded-tr-none shadow-xl'
+                    : 'bg-white dark:bg-[#1a1a1a] text-stone-600 dark:text-stone-300 border border-black/5 dark:border-white/5 rounded-tl-none'
                     }`}
                 >
                   {msg.text}

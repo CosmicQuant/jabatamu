@@ -7,11 +7,11 @@ import Footer from './components/layout/Footer';
 import Hero from './components/home/Hero';
 import { ProductSection } from './components/home/ProductSection';
 import { TestimonialStrip } from './components/home/TestimonialStrip';
+import { VibeSection } from './components/home/VibeSection';
 import { Cart } from './components/Cart';
 import { StickyBuyBar } from './components/StickyBuyBar';
 import { AIAssistant } from './components/AIAssistant';
 import { LabPage } from './components/LabPage';
-import { VibePage } from './components/VibePage';
 import { RootsPage } from './components/RootsPage';
 import { useCart } from './hooks/useCart';
 import { useTheme } from './hooks/useTheme';
@@ -45,10 +45,10 @@ const AppContent: React.FC = () => {
               <Hero />
               <TestimonialStrip />
               <ProductSection onAdd={addToCart} />
+              <VibeSection />
             </>
           } />
           <Route path="/lab" element={<LabPage />} />
-          <Route path="/vibe" element={<VibePage onShopNow={handleShopNow} />} />
           <Route path="/roots" element={<RootsPage />} />
         </Routes>
       </main>

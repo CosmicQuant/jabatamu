@@ -39,7 +39,6 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, isDarkMod
 
     const navLinks = [
         { to: '/lab', label: 'The Lab', activeColor: 'text-green-600 dark:text-green-500 border-b-2 border-green-600 dark:border-green-500' },
-        { to: '/vibe', label: 'The Vibe', activeColor: 'text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 dark:border-orange-500' },
         { to: '/roots', label: 'Our Roots', activeColor: 'text-yellow-600 dark:text-yellow-500 border-b-2 border-yellow-600 dark:border-yellow-500' },
     ];
 

@@ -49,16 +49,14 @@ export const Footer: React.FC = () => {
                         <h4 className="text-stone-900 dark:text-white font-black uppercase tracking-[0.2em] text-xs">Explore</h4>
                         <ul className="space-y-4 text-stone-600 dark:text-stone-500 font-bold uppercase text-[10px] tracking-widest">
                             <li><Link to="/lab" className="hover:text-stone-900 dark:hover:text-white transition-colors">The Lab</Link></li>
-                            <li><Link to="/vibe" className="hover:text-stone-900 dark:hover:text-white transition-colors">The Vibe</Link></li>
                             <li><Link to="/roots" className="hover:text-stone-900 dark:hover:text-white transition-colors">Our Roots</Link></li>
                         </ul>
                     </div>
                     <div className="space-y-6 text-center md:text-left">
                         <h4 className="text-stone-900 dark:text-white font-black uppercase tracking-[0.2em] text-xs">Connect</h4>
                         <ul className="space-y-4 text-stone-600 dark:text-stone-500 font-bold uppercase text-[10px] tracking-widest">
-                            <li><a href="#" className="hover:text-stone-900 dark:hover:text-white transition-colors">Instagram</a></li>
-                            <li><a href="#" className="hover:text-stone-900 dark:hover:text-white transition-colors">TikTok</a></li>
-                            <li><a href="#" className="hover:text-stone-900 dark:hover:text-white transition-colors">X / Twitter</a></li>
+                            <li><a href="https://www.instagram.com/jaba_tamu/" target="_blank" rel="noopener noreferrer" className="hover:text-stone-900 dark:hover:text-white transition-colors">Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@jabatamujuice" target="_blank" rel="noopener noreferrer" className="hover:text-stone-900 dark:hover:text-white transition-colors">TikTok</a></li>
                             <li>
                                 <button onClick={handleWhatsApp} className="hover:text-green-600 dark:hover:text-green-500 transition-colors">
                                     WhatsApp
@@ -68,7 +66,7 @@ export const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-black/5 dark:border-white/5 text-stone-500 dark:text-stone-700 text-[9px] font-black uppercase tracking-[0.4em]">
-                    <span>Â© {new Date().getFullYear()} JabaTamu â€” All Rights Reserved.</span>
+                    <span>© {new Date().getFullYear()} JabaTamu — All Rights Reserved.</span>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-stone-900 dark:hover:text-stone-400 transition-colors">Privacy</a>
                         <a href="#" className="hover:text-stone-900 dark:hover:text-stone-400 transition-colors">Terms</a>
