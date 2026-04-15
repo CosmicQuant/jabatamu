@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
 
             {/* Main content â€” split layout */}
             {/* Main content */}
-            <div className="relative z-10 container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 h-full pt-40 pb-8 md:pt-28 md:pb-10">
+            <div className="relative z-10 container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 h-full pt-32 pb-8 md:pt-28 md:pb-10">
 
                 {/* LEFT — Text */}
                 <div className="flex-1 space-y-3 md:space-y-5 text-center md:text-left max-w-xl">

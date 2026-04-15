@@ -1,11 +1,23 @@
 ﻿import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const LOGO_URL = import.meta.env.BASE_URL + 'jabatamulogo.jpeg';
 // Update to your actual WhatsApp number (Kenya format: 2547XXXXXXXX)
 const WHATSAPP_NUMBER = '254115401049';
 
 export const Footer: React.FC = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleBatch = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => { document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' }); }, 150);
+        } else {
+            document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     const handleWhatsApp = () => {
         const message = encodeURIComponent("Hello JabaTamu! I'd like to place an order. ðŸŒ¿");
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank', 'noopener,noreferrer');
@@ -48,6 +60,7 @@ export const Footer: React.FC = () => {
                     <div className="space-y-6 text-center md:text-left">
                         <h4 className="text-stone-900 dark:text-white font-black uppercase tracking-[0.2em] text-xs">Explore</h4>
                         <ul className="space-y-4 text-stone-600 dark:text-stone-500 font-bold uppercase text-[10px] tracking-widest">
+                            <li><button onClick={handleBatch} className="hover:text-stone-900 dark:hover:text-white transition-colors">The Batch</button></li>
                             <li><Link to="/lab" className="hover:text-stone-900 dark:hover:text-white transition-colors">The Lab</Link></li>
                             <li><Link to="/roots" className="hover:text-stone-900 dark:hover:text-white transition-colors">Our Roots</Link></li>
                         </ul>

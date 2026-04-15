@@ -1,7 +1,7 @@
 
 
-import React from 'react';
-import { HashRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Hero from './components/home/Hero';
@@ -15,6 +15,12 @@ import { LabPage } from './components/LabPage';
 import { RootsPage } from './components/RootsPage';
 import { useCart } from './hooks/useCart';
 import { useTheme } from './hooks/useTheme';
+
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior }); }, [pathname]);
+  return null;
+};
 
 const AppContent: React.FC = () => {
   const { cartItems, isCartOpen, setIsCartOpen, addToCart, updateQuantity, removeFromCart, cartCount } = useCart();
@@ -38,14 +44,15 @@ const AppContent: React.FC = () => {
         toggleTheme={toggleTheme}
       />
 
+      <ScrollToTop />
       <main className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <Routes>
           <Route path="/" element={
             <>
               <Hero />
-              <TestimonialStrip />
               <ProductSection onAdd={addToCart} />
               <VibeSection />
+              <TestimonialStrip />
             </>
           } />
           <Route path="/lab" element={<LabPage />} />

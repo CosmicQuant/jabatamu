@@ -44,8 +44,8 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, isDarkMod
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${scrolled ? 'py-4' : 'py-8'}`}>
-                <div className="container mx-auto px-6">
+            <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${scrolled ? 'py-2' : 'py-3'}`}>
+                <div className="container mx-auto px-3">
                     <div className={`glass rounded-[2rem] px-8 py-4 flex justify-between items-center transition-all duration-500 ${scrolled ? 'shadow-2xl border-black/10 dark:border-white/10 bg-white/90 dark:bg-[#111111]/90' : 'border-white/20 dark:border-white/10 md:border-transparent md:!bg-transparent'}`}>
 
                         {/* Logo */}

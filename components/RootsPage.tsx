@@ -37,6 +37,8 @@ export const RootsPage: React.FC = () => {
             <img
               src={import.meta.env.BASE_URL + 'miraafarm2.png'}
               alt="Miiraa Farm"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
