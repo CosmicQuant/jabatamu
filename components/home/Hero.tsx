@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
         <section className="relative min-h-screen flex flex-col">
             {/* Mobile video background — no negative z-index */}
             <div className="absolute inset-0 md:hidden overflow-hidden bg-black">
-                <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-90" src="/hero-mobile.mp4" />
+                <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-90" src={import.meta.env.BASE_URL + 'hero-mobile.mp4'} />
                 <div className="absolute inset-0 bg-black/50" />
             </div>
 
@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
                     <div className="flex items-center gap-2 justify-center md:justify-start">
                         <span className="flex h-2 w-2 rounded-full bg-green-400 shrink-0" />
                         <span className="text-[10px] font-black text-white/70 md:text-stone-500 dark:text-stone-400 uppercase tracking-wider">
-                            In stock — Order by 2PM for same-day delivery in Nairobi
+                            In stock — Same-day delivery in Nairobi, Mombasa, Diani, Watamu &amp; Kilifi
                         </span>
                     </div>
                 </div>

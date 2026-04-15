@@ -95,8 +95,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAdd }) => {
           onClick={handleAdd}
           disabled={isAdded}
           className={`w-full py-3 md:py-6 rounded-2xl flex items-center justify-center gap-2 md:gap-4 font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-xs transition-all duration-300 ${isAdded
-              ? 'bg-green-500 text-black scale-[0.98]'
-              : 'bg-stone-900 dark:bg-white text-white dark:text-black hover:bg-yellow-500 dark:hover:bg-yellow-400 active:scale-95'
+            ? 'bg-green-500 text-black scale-[0.98]'
+            : 'bg-stone-900 dark:bg-white text-white dark:text-black hover:bg-yellow-500 dark:hover:bg-yellow-400 active:scale-95'
             }`}
         >
           {isAdded ? (

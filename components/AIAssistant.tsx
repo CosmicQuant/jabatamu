@@ -31,7 +31,7 @@ export const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100]">
+    <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-[100]">
       {isOpen ? (
         <div className="w-80 md:w-96 h-[550px] bg-stone-50 dark:bg-[#111111] border border-black/10 dark:border-white/10 rounded-[2.5rem] shadow-2xl flex flex-col overflow-hidden">
           <div className="bg-stone-100 dark:bg-black p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center">

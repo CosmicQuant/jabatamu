@@ -36,7 +36,7 @@ export const TestimonialStrip: React.FC = () => {
                         {[...Array(5)].map((_, i) => <Star key={i} />)}
                     </div>
                     <h2 className="text-3xl font-black text-stone-900 dark:text-white uppercase tracking-tighter">
-                        What Nairobi Is Saying
+                        What Kenyans Are Saying
                     </h2>
                     <p className="text-stone-500 dark:text-stone-600 text-sm font-medium">
                         Over 2,400 happy customers and counting.

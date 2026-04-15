@@ -151,7 +151,7 @@ export const Cart: React.FC<CartProps> = ({ items, isOpen, onClose, onUpdateQuan
 
             <div className="flex items-center justify-center gap-3 text-stone-400 dark:text-stone-700">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-              <span className="text-[9px] font-black uppercase tracking-[0.2em]">Fast delivery within Nairobi</span>
+              <span className="text-[9px] font-black uppercase tracking-[0.2em]">Same-day delivery: Nairobi, Mombasa, Diani, Watamu &amp; Kilifi</span>
             </div>
           </div>
         )}

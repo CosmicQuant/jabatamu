@@ -35,7 +35,7 @@ export const RootsPage: React.FC = () => {
           </div>
           <div className="flex-1 aspect-[4/5] bg-stone-100 dark:bg-stone-900 rounded-[4rem] border border-black/5 dark:border-white/5 overflow-hidden">
             <img
-              src="/miraafarm2.png"
+              src={import.meta.env.BASE_URL + 'miraafarm2.png'}
               alt="Miiraa Farm"
               className="w-full h-full object-cover"
             />
@@ -74,7 +74,7 @@ export const RootsPage: React.FC = () => {
         <h2 className="text-4xl font-black text-stone-900 dark:text-white uppercase tracking-tighter italic">Taste the Tradition.</h2>
         <div className="w-full h-[500px] bg-stone-100 dark:bg-stone-900 rounded-[3rem] overflow-hidden border border-black/10 dark:border-white/10">
           <img
-            src="/miraaplant.jpg"
+            src={import.meta.env.BASE_URL + 'miraaplant.jpg'}
             alt="Miiraa Plant"
             className="w-full h-full object-cover"
           />

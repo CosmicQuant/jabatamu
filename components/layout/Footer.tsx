@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
 
-const LOGO_URL = "https://lh3.googleusercontent.com/d/1S0DeyWf89tMiI41S3TRE09h-2P0Rm-DX";
+const LOGO_URL = import.meta.env.BASE_URL + 'jabatamulogo.jpeg';
 // Update to your actual WhatsApp number (Kenya format: 2547XXXXXXXX)
 const WHATSAPP_NUMBER = '254115401049';
 
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="space-y-1">
                         <p className="text-white font-black text-2xl uppercase tracking-tighter">Order via WhatsApp</p>
-                        <p className="text-green-200 font-medium text-sm">Same-day delivery across Nairobi. Fresh, fast, and direct.</p>
+                        <p className="text-green-200 font-medium text-sm">Same-day delivery in Nairobi, Mombasa, Diani, Watamu &amp; Kilifi. Fresh, fast, and direct.</p>
                     </div>
                     <button
                         onClick={handleWhatsApp}
