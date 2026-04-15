@@ -98,22 +98,23 @@ export const Hero: React.FC = () => {
 
 
                 {/* RIGHT — Video phone mockup (desktop only) */}
-                <div className="flex-1 hidden md:flex items-center justify-center">
-                    <div className="relative group">
+                <div className="flex-1 hidden md:flex items-center justify-center py-4">
+                    <div className="relative group h-full flex items-center">
                         {/* Ambient glow */}
                         <div className="absolute -inset-8 bg-yellow-400/20 rounded-[4rem] blur-3xl group-hover:bg-yellow-400/30 transition-all duration-700" />
 
-                        {/* Phone-shaped video frame */}
-                        <div className="relative w-72 aspect-[9/19] rounded-[3rem] overflow-hidden border-4 border-white/20 shadow-[0_40px_80px_rgba(0,0,0,0.35)] rotate-[-3deg] group-hover:rotate-0 transition-transform duration-700">
+                        {/* Phone-shaped video frame — height-constrained to fit viewport */}
+                        <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-white/20 shadow-[0_40px_80px_rgba(0,0,0,0.35)] rotate-[-3deg] group-hover:rotate-0 transition-transform duration-700"
+                             style={{ height: 'calc(100vh - 180px)', maxHeight: '580px', aspectRatio: '9/19', maxWidth: '260px' }}>
                             <video
                                 autoPlay
                                 muted
                                 loop
                                 playsInline
-                                className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700"
+                                className="absolute inset-0 w-full h-full object-cover object-top scale-105 group-hover:scale-100 transition-transform duration-700"
                                 src={import.meta.env.BASE_URL + 'hero-mobile.mp4'}
                             />
-                            <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] rounded-[3rem] pointer-events-none" />
+                            <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.4)] rounded-[2.5rem] pointer-events-none" />
                         </div>
 
                         {/* Floating label */}
