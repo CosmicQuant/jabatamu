@@ -32,7 +32,11 @@ export const StickyBuyBar: React.FC<StickyBuyBarProps> = ({ onAdd, isCartOpen })
                         <button
                             key={p.id}
                             onClick={() => onAdd(p)}
-                            className="px-4 py-2.5 rounded-xl bg-stone-900 dark:bg-white text-white dark:text-black font-black text-[10px] uppercase tracking-wider hover:bg-yellow-500 dark:hover:bg-yellow-400 transition-all active:scale-95 whitespace-nowrap"
+                            className={`px-4 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-wider transition-all active:scale-95 whitespace-nowrap ${
+                                p.flavor === 'Passion'
+                                    ? 'bg-orange-500 text-white hover:bg-orange-400'
+                                    : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                            }`}
                         >
                             {p.flavor}
                         </button>

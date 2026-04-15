@@ -29,7 +29,7 @@ export const ProductSection = forwardRef<HTMLDivElement, ProductSectionProps>(({
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-7xl mx-auto">
                     {PRODUCTS.map(product => (
                         <ProductCard key={product.id} product={product} onAdd={onAdd} />
                     ))}

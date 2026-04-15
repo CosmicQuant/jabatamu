@@ -23,9 +23,15 @@ export const Hero: React.FC = () => {
     const pineappleProduct = PRODUCTS.find(p => p.flavor === 'Pineapple');
 
     return (
-        <section className="relative overflow-hidden min-h-screen flex flex-col">
+        <section className="relative min-h-screen flex flex-col">
+            {/* Mobile video background — no negative z-index */}
+            <div className="absolute inset-0 md:hidden overflow-hidden bg-black">
+                <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-90" src="/hero-mobile.mp4" />
+                <div className="absolute inset-0 bg-black/50" />
+            </div>
+
             {/* Desktop Background Image */}
-            <div className="absolute inset-0 -z-20 hidden md:block">
+            <div className="absolute inset-0 hidden md:block">
                 <img
                     src="https://lh3.googleusercontent.com/d/1h3C6YGGBvJtjg0dktQf1pV8Z8DxLXtBV"
                     alt=""
@@ -35,58 +41,52 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-stone-50 via-stone-50/90 to-stone-50/20 dark:from-[#0a0a0a] dark:via-[#0a0a0a]/90 dark:to-[#0a0a0a]/20" />
             </div>
 
-            {/* Mobile/Narrow Background Video */}
-            <div className="absolute inset-0 -z-20 block md:hidden">
-                <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-80 dark:opacity-50" src="/hero-mobile.mp4">
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-b from-stone-50/20 via-stone-50/50 to-stone-50 dark:from-[#0a0a0a]/20 dark:via-[#0a0a0a]/50 dark:to-[#0a0a0a]" />
-            </div>
-
-            {/* Ambient glow */}
-            <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 -z-10 w-[600px] h-[600px] bg-yellow-400/10 rounded-full blur-[120px] pointer-events-none" />
+            {/* Ambient glow — desktop only */}
+            <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-400/10 rounded-full blur-[120px] pointer-events-none hidden md:block" />
 
             {/* Main content â€” split layout */}
-            <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12 min-h-screen pt-36 pb-24">
+            {/* Main content */}
+            <div className="relative z-10 container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-8 min-h-screen pt-28 pb-20 md:pt-36 md:pb-24">
 
                 {/* LEFT â€” Text */}
-                <div className="flex-1 space-y-8 text-center md:text-left max-w-xl z-10">
+                {/* LEFT — Text */}
+                <div className="flex-1 space-y-5 md:space-y-8 text-center md:text-left max-w-xl">
 
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-3 px-5 py-2 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-stone-600 dark:text-stone-300 text-[10px] font-black tracking-[0.3em] uppercase">
-                        <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 md:bg-black/5 dark:bg-white/5 border border-white/20 md:border-black/10 dark:border-white/10 rounded-full text-white md:text-stone-600 dark:text-stone-300 text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm">
+                        <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                         The Original Highland Elixir
                     </div>
 
                     {/* Social proof */}
-                    <div className="flex items-center gap-3 justify-center md:justify-start">
+                    <div className="flex items-center gap-2 justify-center md:justify-start flex-wrap">
                         <StarRating />
-                        <span className="text-[11px] font-black text-stone-500 dark:text-stone-400 uppercase tracking-wider">
+                        <span className="text-[10px] font-black text-white/80 md:text-stone-500 dark:text-stone-400 uppercase tracking-wider">
                             Kenya's #1 — Loved by hundreds of thousands
                         </span>
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-6xl md:text-8xl font-black text-stone-900 dark:text-white leading-[0.85] tracking-tighter">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white md:text-stone-900 dark:text-white leading-[0.85] tracking-tighter">
                         REFINE YOUR <br />
-                        <span className="text-brand italic">ENERGY.</span>
+                        <span className="text-yellow-400 md:text-brand italic">ENERGY.</span>
                     </h1>
 
-                    <p className="text-lg text-stone-600 dark:text-stone-400 font-medium leading-relaxed">
+                    <p className="text-sm md:text-lg text-white/80 md:text-stone-600 dark:text-stone-400 font-medium leading-relaxed max-w-xs mx-auto md:max-w-none md:mx-0">
                         Clean, focused, and purely botanical. JabaTamu is the premium cold-pressed khat juice for those who demand more from their day.
                     </p>
 
                     {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-center md:justify-start">
                         <button
                             onClick={navigateToShop}
-                            className="group relative bg-stone-900 dark:bg-white text-white dark:text-black px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-yellow-500 dark:hover:bg-yellow-400 transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(251,191,36,0.2)]"
+                            className="bg-yellow-400 text-black px-8 py-4 md:px-12 md:py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-yellow-300 transition-all active:scale-95 shadow-lg"
                         >
-                            <span className="relative z-10">Shop the Batch</span>
-                            <div className="absolute inset-0 bg-yellow-400 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity" />
+                            Shop the Batch
                         </button>
                         <Link
                             to="/lab"
-                            className="bg-transparent text-stone-900 dark:text-white px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] border border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 transition-all"
+                            className="text-center bg-white/10 text-white md:text-stone-900 dark:text-white px-8 py-4 md:px-12 md:py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] border border-white/30 md:border-black/10 dark:border-white/10 hover:bg-white/20 md:hover:bg-black/5 transition-all backdrop-blur-sm"
                         >
                             Our Process
                         </Link>
@@ -94,15 +94,16 @@ export const Hero: React.FC = () => {
 
                     {/* Urgency strip */}
                     <div className="flex items-center gap-2 justify-center md:justify-start">
-                        <span className="flex h-2 w-2 rounded-full bg-green-500 shrink-0" />
-                        <span className="text-[11px] font-black text-stone-500 dark:text-stone-400 uppercase tracking-wider">
-                            In stock â€” Order by 2PM for same-day delivery in Nairobi
+                        <span className="flex h-2 w-2 rounded-full bg-green-400 shrink-0" />
+                        <span className="text-[10px] font-black text-white/70 md:text-stone-500 dark:text-stone-400 uppercase tracking-wider">
+                            In stock — Order by 2PM for same-day delivery in Nairobi
                         </span>
                     </div>
                 </div>
 
                 {/* RIGHT â€” Product bottles (desktop only) */}
-                <div className="flex-1 hidden md:flex items-center justify-center gap-6 z-10">
+                {/* RIGHT — Product bottles (desktop only) */}
+                <div className="flex-1 hidden md:flex items-center justify-center gap-6">
                     {/* Passion bottle */}
                     <div className="relative group">
                         <div className="absolute -inset-6 bg-orange-400/20 rounded-[3rem] blur-2xl group-hover:bg-orange-400/30 transition-all duration-700" />
@@ -140,9 +141,9 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce">
-                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-stone-400">Scroll</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-stone-400"><path d="m6 9 6 6 6-6" /></svg>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce z-10">
+                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/60 md:text-stone-400">Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/60 md:text-stone-400"><path d="m6 9 6 6 6-6" /></svg>
             </div>
         </section>
     );

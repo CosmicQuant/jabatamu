@@ -1,7 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const LOGO_URL = "https://lh3.googleusercontent.com/d/1S0DeyWf89tMiI41S3TRE09h-2P0Rm-DX";
+const LOGO_URL = "/jabatamulogo.jpeg";
 
 interface NavbarProps {
     cartCount: number;
