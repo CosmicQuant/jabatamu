@@ -8,10 +8,9 @@ export const LabPage: React.FC = () => {
       <section className="relative container mx-auto px-6 py-32 text-center space-y-8 overflow-hidden rounded-[4rem]">
         <div className="absolute inset-0 -z-20">
           <img 
-            src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=2574" 
+            src={import.meta.env.BASE_URL + 'lab1.png'} 
             alt="Laboratory Science" 
             className="w-full h-full object-cover opacity-50 dark:opacity-20"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-50/40 via-stone-50/60 to-stone-50 dark:from-[#0a0a0a]/40 dark:via-[#0a0a0a]/60 dark:to-[#0a0a0a]"></div>
         </div>
@@ -62,10 +61,9 @@ export const LabPage: React.FC = () => {
             </p>
             <div className="aspect-video rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 overflow-hidden">
                <img 
-                src="https://images.unsplash.com/photo-1579154273821-ad150028a315?auto=format&fit=crop&q=80&w=800" 
-                alt="Lab Analysis"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity"
+                src={import.meta.env.BASE_URL + 'molecular.png'} 
+                alt="Molecular Analysis"
+                className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
                />
             </div>
           </div>

@@ -46,11 +46,11 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, isDarkMod
         <>
             <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${scrolled ? 'py-4' : 'py-8'}`}>
                 <div className="container mx-auto px-6">
-                    <div className={`glass rounded-[2rem] px-8 py-4 flex justify-between items-center transition-all duration-500 ${scrolled ? 'shadow-2xl border-black/10 dark:border-white/10 bg-white/90 dark:bg-[#111111]/90' : 'border-transparent bg-transparent'}`}>
+                    <div className={`glass rounded-[2rem] px-8 py-4 flex justify-between items-center transition-all duration-500 ${scrolled ? 'shadow-2xl border-black/10 dark:border-white/10 bg-white/90 dark:bg-[#111111]/90' : 'border-white/20 dark:border-white/10 md:border-transparent md:!bg-transparent'}`}>
 
                         {/* Logo */}
-                        <Link to="/" className="flex items-center gap-4 group">
-                            <div className="w-12 h-12 rounded-full overflow-hidden border border-black/20 dark:border-white/20 transition-transform group-hover:rotate-[360deg] duration-1000">
+                        <Link to="/" className="flex items-center gap-4">
+                            <div className="logo-auto-spin w-12 h-12 rounded-full overflow-hidden border border-black/20 dark:border-white/20">
                                 <img src={LOGO_URL} alt="JabaTamu Logo" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
                             </div>
                             <span className="text-2xl font-black tracking-tighter text-stone-900 dark:text-white hidden sm:block italic">JabaTamu</span>

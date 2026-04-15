@@ -40,6 +40,15 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    @keyframes logo-spin-pause {
+      0%   { transform: rotate(0deg); }
+      18%  { transform: rotate(360deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .logo-auto-spin {
+      animation: logo-spin-pause 5s ease-in-out infinite;
+    }
   </style>
   <script type="importmap">
 {
