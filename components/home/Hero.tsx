@@ -105,7 +105,7 @@ export const Hero: React.FC = () => {
 
                         {/* Phone-shaped video frame — height-constrained to fit viewport */}
                         <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-white/20 shadow-[0_40px_80px_rgba(0,0,0,0.35)] rotate-[-3deg] group-hover:rotate-0 transition-transform duration-700"
-                             style={{ height: 'calc(100vh - 180px)', maxHeight: '580px', aspectRatio: '9/19', maxWidth: '260px' }}>
+                            style={{ height: 'calc(100vh - 180px)', maxHeight: '580px', aspectRatio: '9/19', maxWidth: '260px' }}>
                             <video
                                 autoPlay
                                 muted
