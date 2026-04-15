@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col">
+        <section className="relative h-screen overflow-hidden flex flex-col">
             {/* Mobile video background — no negative z-index */}
             <div className="absolute inset-0 md:hidden overflow-hidden bg-black">
                 <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-90" src={import.meta.env.BASE_URL + 'hero-mobile.mp4'} />
@@ -42,11 +42,10 @@ export const Hero: React.FC = () => {
 
             {/* Main content â€” split layout */}
             {/* Main content */}
-            <div className="relative z-10 container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-8 min-h-screen pt-28 pb-20 md:pt-36 md:pb-24">
+            <div className="relative z-10 container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 h-full pt-24 pb-10 md:pt-28 md:pb-10">
 
-                {/* LEFT â€” Text */}
                 {/* LEFT — Text */}
-                <div className="flex-1 space-y-5 md:space-y-8 text-center md:text-left max-w-xl">
+                <div className="flex-1 space-y-4 md:space-y-5 text-center md:text-left max-w-xl">
 
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 md:bg-black/5 dark:bg-white/5 border border-white/20 md:border-black/10 dark:border-white/10 rounded-full text-white md:text-stone-600 dark:text-stone-300 text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm">
