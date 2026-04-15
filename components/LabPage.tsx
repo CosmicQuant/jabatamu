@@ -8,10 +8,9 @@ export const LabPage: React.FC = () => {
       <section className="relative container mx-auto px-6 py-32 text-center space-y-8 overflow-hidden rounded-[4rem]">
         <div className="absolute inset-0 -z-20">
           <img
-            src="https://images.pexels.com/photos/8532867/pexels-photo-8532867.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+            src={import.meta.env.BASE_URL + 'lab1.jpg'}
             alt="Laboratory Science"
-            className="w-full h-full object-cover opacity-60 dark:opacity-40"
-            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover opacity-60 dark:opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-50/40 via-stone-50/60 to-stone-50 dark:from-[#0a0a0a]/40 dark:via-[#0a0a0a]/60 dark:to-[#0a0a0a]"></div>
         </div>
