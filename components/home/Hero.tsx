@@ -20,10 +20,11 @@ export const Hero: React.FC = () => {
 
     return (
         <section className="relative h-screen overflow-hidden flex flex-col">
-            {/* Mobile video background — no negative z-index */}
+            {/* Mobile video background */}
             <div className="absolute inset-0 md:hidden overflow-hidden bg-black">
-                <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-90" src={import.meta.env.BASE_URL + 'hero-mobile.mp4'} />
-                <div className="absolute inset-0 bg-black/50" />
+                <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" src={import.meta.env.BASE_URL + 'hero-mobile.mp4'} />
+                {/* Gradient: dark at top (navbar + badge), clear in middle (video shows), dark at bottom (buttons) */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/10 to-black/80" />
             </div>
 
             {/* Desktop Background Image */}
@@ -45,10 +46,10 @@ export const Hero: React.FC = () => {
             <div className="relative z-10 container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 h-full pt-24 pb-10 md:pt-28 md:pb-10">
 
                 {/* LEFT — Text */}
-                <div className="flex-1 space-y-4 md:space-y-5 text-center md:text-left max-w-xl">
+                <div className="flex-1 space-y-3 md:space-y-5 text-center md:text-left max-w-xl">
 
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 md:bg-black/5 dark:bg-white/5 border border-white/20 md:border-black/10 dark:border-white/10 rounded-full text-white md:text-stone-600 dark:text-stone-300 text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm">
+                    {/* Badge — desktop only */}
+                    <div className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-stone-600 dark:text-stone-300 text-[10px] font-black tracking-[0.3em] uppercase">
                         <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                         The Original Highland Elixir
                     </div>
@@ -56,32 +57,32 @@ export const Hero: React.FC = () => {
                     {/* Social proof */}
                     <div className="flex items-center gap-2 justify-center md:justify-start flex-wrap">
                         <StarRating />
-                        <span className="text-[10px] font-black text-white/80 md:text-stone-500 dark:text-stone-400 uppercase tracking-wider">
+                        <span className="text-[10px] font-black text-white md:text-stone-500 dark:text-stone-400 uppercase tracking-wider [text-shadow:0_1px_8px_rgba(0,0,0,1)] md:[text-shadow:none]">
                             Kenya's #1 — Loved by hundreds of thousands
                         </span>
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white md:text-stone-900 dark:text-white leading-[0.85] tracking-tighter">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white md:text-stone-900 dark:text-white leading-[0.85] tracking-tighter [text-shadow:0_2px_16px_rgba(0,0,0,0.9)] md:[text-shadow:none]">
                         REFINE YOUR <br />
                         <span className="text-yellow-400 md:text-brand italic">ENERGY.</span>
                     </h1>
 
-                    <p className="text-sm md:text-lg text-white/80 md:text-stone-600 dark:text-stone-400 font-medium leading-relaxed max-w-xs mx-auto md:max-w-none md:mx-0">
+                    <p className="text-sm md:text-lg text-white/90 md:text-stone-600 dark:text-stone-400 font-medium leading-snug max-w-xs mx-auto md:max-w-none md:mx-0 [text-shadow:0_1px_8px_rgba(0,0,0,0.9)] md:[text-shadow:none]">
                         Clean, focused, and purely botanical. JabaTamu is the premium cold-pressed khat juice for those who demand more from their day.
                     </p>
 
                     {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-center md:justify-start">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 md:gap-3 justify-center md:justify-start">
                         <button
                             onClick={navigateToShop}
-                            className="bg-yellow-400 text-black px-8 py-4 md:px-12 md:py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-yellow-300 transition-all active:scale-95 shadow-lg"
+                            className="bg-yellow-400 text-black px-8 py-3.5 md:px-12 md:py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-yellow-300 transition-all active:scale-95 shadow-xl shadow-black/30"
                         >
                             Shop the Batch
                         </button>
                         <Link
                             to="/lab"
-                            className="text-center bg-white/10 text-white md:text-stone-900 dark:text-white px-8 py-4 md:px-12 md:py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] border border-white/30 md:border-black/10 dark:border-white/10 hover:bg-white/20 md:hover:bg-black/5 transition-all backdrop-blur-sm"
+                            className="text-center bg-white/15 text-white md:text-stone-900 dark:text-white px-8 py-3.5 md:px-12 md:py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] border border-white/40 md:border-black/10 dark:border-white/10 hover:bg-white/25 md:hover:bg-black/5 transition-all backdrop-blur-sm"
                         >
                             Our Process
                         </Link>
@@ -90,7 +91,7 @@ export const Hero: React.FC = () => {
                     {/* Urgency strip */}
                     <div className="flex items-center gap-2 justify-center md:justify-start">
                         <span className="flex h-2 w-2 rounded-full bg-green-400 shrink-0" />
-                        <span className="text-[10px] font-black text-white/70 md:text-stone-500 dark:text-stone-400 uppercase tracking-wider">
+                        <span className="text-[10px] font-black text-white/90 md:text-stone-500 dark:text-stone-400 uppercase tracking-wider [text-shadow:0_1px_6px_rgba(0,0,0,1)] md:[text-shadow:none]">
                             In stock — Same-day delivery in Nairobi, Mombasa, Diani, Watamu &amp; Kilifi
                         </span>
                     </div>

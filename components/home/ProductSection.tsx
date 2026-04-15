@@ -41,15 +41,15 @@ export const ProductSection = forwardRef<HTMLDivElement, ProductSectionProps>(({
                         <p className="text-black font-black text-2xl uppercase tracking-tighter">🎁 Get Both Flavours</p>
                         <p className="text-black/70 font-semibold text-sm">Passion Burst + Pineapple Gold — the complete set</p>
                     </div>
-                    <div className="flex items-center gap-8">
-                        <div className="text-center">
+                    <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-8 w-full sm:w-auto">
+                        <div className="text-center w-full sm:w-auto">
                             <p className="text-black/50 font-bold text-xs line-through uppercase tracking-wider">KSh 1,800</p>
                             <p className="text-black font-black text-3xl tracking-tighter">KSh 1,600</p>
                             <p className="text-black/70 text-[10px] font-black uppercase tracking-[0.2em]">Save KSh 200</p>
                         </div>
                         <button
                             onClick={handleAddBundle}
-                            className="bg-black text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-stone-800 transition-all active:scale-95 shadow-lg whitespace-nowrap"
+                            className="bg-black text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-stone-800 transition-all active:scale-95 shadow-lg w-full sm:w-auto"
                         >
                             Add Bundle to Cart
                         </button>
