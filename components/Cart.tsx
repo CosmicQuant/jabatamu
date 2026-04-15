@@ -20,10 +20,10 @@ export const Cart: React.FC<CartProps> = ({ items, isOpen, onClose, onUpdateQuan
 
   const handleWhatsAppCheckout = () => {
     const orderLines = items.map(item =>
-      `â€¢ ${item.name} x${item.quantity} â€” KSh ${(item.price * item.quantity).toLocaleString()}`
+      `• ${item.name} x${item.quantity} — KSh ${(item.price * item.quantity).toLocaleString()}`
     ).join('\n');
     const message = encodeURIComponent(
-      `Hello JabaTamu! ðŸ‘‹\n\nI'd like to place an order:\n\n${orderLines}\n\n*Total: KSh ${total.toLocaleString()}*\n\nPlease confirm my order and delivery details. Thank you!`
+      `Hello JabaTamu! 👋\n\nI'd like to place an order:\n\n${orderLines}\n\n*Total: KSh ${total.toLocaleString()}*\n\nPlease confirm my order and delivery details. Thank you!`
     );
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
